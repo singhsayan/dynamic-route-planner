@@ -8,6 +8,13 @@ The system supports multiple input formats, random graph generation, shortest pa
 
 ---
 
+## System Architecture
+<p align="center">
+  <img src="screenshot/diagram.png" alt="System Diagram" width="650"/>
+</p>
+
+---
+
 ## Features
 
 ### Graph Input
@@ -37,28 +44,39 @@ The system supports multiple input formats, random graph generation, shortest pa
 ## Example Workflow
 
 ### 1. Load Graph
-![Load Graph](screenshot/Load_graph.png)
+<p align="center">
+  <img src="screenshot/Load_graph.png" alt="Load Graph" width="600"/>
+</p>
 
 ### 2. Generate Random Graph
-![Random Graph](screenshot/Random_graph_generate.png)
+<p align="center">
+  <img src="screenshot/Random_graph_generate.png" alt="Random Graph" width="600"/>
+</p>
 
 ### 3. Print Graph
-![Print Graph](screenshot/print_graph.png)
+<p align="center">
+  <img src="screenshot/print_graph.png" alt="Print Graph" width="600"/>
+</p>
 
 ### 4. Run Dijkstra
-![Dijkstra](screenshot/Run_dijkstra.png)
+<p align="center">
+  <img src="screenshot/Run_dijkstra.png" alt="Run Dijkstra" width="600"/>
+</p>
 
 ### 5. Run Floyd–Warshall
-![Floyd–Warshall](screenshot/floyd_warshall.png)
+<p align="center">
+  <img src="screenshot/floyd_warshall.png" alt="Floyd Warshall" width="600"/>
+</p>
 
 ### 6. Run A\* Search
-![A Star](screenshot/run_a_star.png)
+<p align="center">
+  <img src="screenshot/run_a_star.png" alt="Run A Star" width="600"/>
+</p>
 
 ### 7. Benchmark Algorithms
-![Benchmark](screenshot/Benchmark_comparison.png)
-
-### 8. System Diagram
-![Diagram](screenshot/diagram.png)
+<p align="center">
+  <img src="screenshot/Benchmark_comparison.png" alt="Benchmark Comparison" width="600"/>
+</p>
 
 ---
 
