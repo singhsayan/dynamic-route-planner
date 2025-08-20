@@ -9,7 +9,6 @@
 
 using namespace std;
 
-// ---- Load "graph.txt" with first line: V E, then lines: u v w ----
 Graph loadGraphTXT(const string &filename, bool directed = false) {
     ifstream file(filename);
     if (!file.is_open()) throw runtime_error("Could not open file: " + filename);
@@ -23,7 +22,6 @@ Graph loadGraphTXT(const string &filename, bool directed = false) {
     return g;
 }
 
-// ---- Load CSV: each line "u,v,w". V inferred from max node id ----
 Graph loadGraphCSV(const string& filename, bool directed = false) {
     ifstream in(filename);
     if (!in.is_open()) throw runtime_error("Could not open CSV: " + filename);
@@ -34,10 +32,9 @@ Graph loadGraphCSV(const string& filename, bool directed = false) {
 
     while (getline(in, line)) {
         if (line.empty()) continue;
-        // Skip header lines containing non-digit chars at start
         if (!isdigit(line[0]) && line[0] != '-') continue;
 
-        replace(line.begin(), line.end(), ';', ','); // tolerate ';'
+        replace(line.begin(), line.end(), ';', ',');
         stringstream ss(line);
         string a,b,c;
         if (!getline(ss, a, ',')) continue;
@@ -73,7 +70,6 @@ void benchmark(Graph &g, int runs = 5) {
 
     int V = g.size();
 
-    // Dijkstra all-pairs
     long long totalD = 0;
     for (int r = 0; r < runs; r++) {
         auto start = chrono::high_resolution_clock::now();
@@ -85,7 +81,6 @@ void benchmark(Graph &g, int runs = 5) {
     }
     cout << "Dijkstra (all pairs) : " << (totalD / runs) << "\n";
 
-    // Floyd–Warshall
     long long totalF = 0;
     for (int r = 0; r < runs; r++) {
         auto start = chrono::high_resolution_clock::now();
